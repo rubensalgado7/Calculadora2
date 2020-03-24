@@ -7,10 +7,17 @@
 
 
     <form method="post">
+
+        <!--criar o efeito memoria no HTTP-->
+        <input type="hidden" name="operador" value="@ViewBag.Operador" />
+        <input type="hidden" name="operando" value="@ViewBag.Operando" />
+        <input type="hidden" name="limpaVisor" value="@ViewBag.LimpaVisor" />
+
+
         <table border="1">
             <tr>
                 <td colspan="5">
-                    <input type="text" readonly="readonly" value="0" name="visor" />
+                    <input type="text" readonly="readonly" value="@ViewBag.Visor" name="visor" />
                 </td>
 
             </tr>
@@ -64,7 +71,7 @@
                     <input type="submit" value="3" name="bt" class="btn" />
                 </td>
                 <td>
-                    <input type="submit" value="-" name="bt" class="btn" />
+                    <input type="submit" value="+" name="bt" class="btn" />
                 </td>
                 <td rowspan="2">
                     <input type="submit" value="=" name="bt" class="btn" />
